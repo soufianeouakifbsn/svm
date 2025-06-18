@@ -11,10 +11,9 @@ wget -O ngrok.tgz https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd
 sudo tar xvzf ./ngrok.tgz -C /usr/local/bin
 sudo apt install -y jq
 
-# User input for Ngrok token and domain
-echo "🔴🔴🔴 Please log in to ngrok.com and provide your auth token and static domain."
-read -p "Enter Ngrok Auth Token: " token
-read -p "Enter Ngrok Domain: " domain
+# Ngrok credentials (inserted directly)
+token="2ydu6xnFE745us2CHwUkj3AAjUe_7QBXqRsTdNKYh76JJZfK2"
+domain="talented-fleet-monkfish.ngrok-free.app"
 
 # Configure and start Ngrok
 ngrok config add-authtoken "$token"
