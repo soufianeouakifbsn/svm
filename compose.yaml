@@ -1,0 +1,10 @@
+services:
+  svr_video:
+    image: gyoridavid/short-video-maker:latest-tiny
+    container_name: short-video-maker
+    ports:
+      - "81:8501"
+    volumes:
+      - /root/short_video_data:/app
+    environment:
+      - STREAMLIT_SERVER_PORT=8501
